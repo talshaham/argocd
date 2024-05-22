@@ -35,8 +35,8 @@ jobs:
       - name: list files
         run: ls
      
-      # - name: yq - install
-      #   uses: mikefarah/yq@v4.44.1
+      - name: yq - install
+        uses: mikefarah/yq@v4.44.1
 
-      # - name: yq change version
-      #   uses: yq -i '.a.b[0].c = "cool"' file.yaml
+      - name: yq change version
+        run: yq -i '.spec.template.spec = "60"' manifest_files/delpoyment.yaml
