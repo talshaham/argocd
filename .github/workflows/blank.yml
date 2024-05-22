@@ -31,6 +31,9 @@ jobs:
 
       - name: current location
         run: pwd
+
+      - name: list files
+        run: ls
      
       # - name: yq - install
       #   uses: mikefarah/yq@v4.44.1
