@@ -39,4 +39,5 @@ jobs:
         uses: mikefarah/yq@v4.44.1
 
       - name: yq change version
-        run: yq -i '.spec.template.spec = "60"' /manifest_files/delpoyment.yaml
+        working-directory: ./manifest_files
+        run: yq -i '.spec.template.spec = "60"' delpoyment.yaml
