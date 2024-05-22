@@ -26,7 +26,7 @@ jobs:
 
       - name: yq change version
         working-directory: ./manifest_files
-        run: yq -i '.spec.template.spec.containers.image = "70"' deployment.yaml
+        run: yq -i '.spec.template.spec.containers.image = "talshaham/app-weather:70"' deployment.yaml
 
     # commit         
       - name: Add & Commit           
