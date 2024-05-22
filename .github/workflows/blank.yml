@@ -40,4 +40,4 @@ jobs:
 
       - name: yq change version
         working-directory: ./manifest_files
-        run: yq -i '.spec.template.spec = "60"' delpoyment.yaml
+        run: yq -i '.spec.template.spec = "60"' deployment.yaml
