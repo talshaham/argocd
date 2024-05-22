@@ -13,8 +13,13 @@ spec:
     metadata:
       labels:
         app: weather-app
-    spec: "60"
+    spec:
+      containers:
+      - name: weather-app
+        image: talshaham/app-weather:83
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -28,5 +33,3 @@ spec:
     - port: 80
       name: http
       targetPort: 5000
-  template:
-    spec: "60"
